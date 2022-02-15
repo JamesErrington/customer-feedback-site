@@ -1,0 +1,22 @@
+.app {
+  width: 100vw;
+}
+
+.main {
+  min-height: calc(100vh - 102px);
+}
+
+.footer {
+  position: absolute !important;
+  border-radius: 0 !important;
+  width: 100vw;
+}
+
+.footer .github {
+  color: white !important;
+}
+
+main {
+  margin-left: 25px;
+  margin-right: 25px;
+}
