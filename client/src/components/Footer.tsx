@@ -1,4 +1,3 @@
-import React from "react";
 import type { FunctionComponent } from "react";
 import { Segment, List, Icon } from "semantic-ui-react";
 

@@ -10,6 +10,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
+    "plugin:valtio/recommended",
     "prettier",
   ],
   parser: "@typescript-eslint/parser",
@@ -22,10 +23,13 @@ module.exports = {
   },
   plugins: ["@typescript-eslint"],
   rules: {
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": ["warn", { varsIgnorePattern: "_" }],
     "@typescript-eslint/no-inferrable-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
+    "react/prop-types": [true, { ignore: ["children"] }],
   },
   ignorePatterns: "**/build/",
   settings: {

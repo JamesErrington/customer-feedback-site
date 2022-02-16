@@ -19,4 +19,84 @@
 main {
   margin-left: 25px;
   margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  justify-content: center;
+}
+
+.header-title::before {
+  display: none;
+}
+
+.feedback-container {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback-form-chart {
+  width: 100%;
+}
+
+.feedback-form-card {
+  flex: 1;
+}
+
+.chart-card {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback-feed-container {
+  width: 100%;
+}
+
+.feedback-feed-card {
+  width: 100% !important;
+  padding: 10px !important;
+}
+
+.form-header {
+  text-align: center;
+  margin-top: 10px !important;
+}
+
+.form-input {
+  margin: 10px !important;
+}
+
+#form-rating-input {
+  text-align: center;
+}
+
+.form-submit {
+  float: right;
+  margin: 10px !important;
+}
+
+.product-item-card {
+  text-align: center;
+  padding: 10px !important;
+}
+
+.product-item > .content > .extra {
+  margin-top: 10px;
+}
+
+.error-message {
+  text-align: center;
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
 }
