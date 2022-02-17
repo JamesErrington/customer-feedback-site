@@ -1,4 +1,4 @@
-import { FunctionComponent, Suspense, useEffect } from "react";
+import { FunctionComponent, useEffect } from "react";
 import { useRouteMatch } from "react-router-dom";
 import { Card } from "semantic-ui-react";
 
@@ -29,7 +29,7 @@ export const App: FunctionComponent = () => {
         <main>
           <ProductCard />
           <div className="feedback-container">
-            <Card.Group className="feedback-form-chart">
+            <Card.Group className="feedback-form-chart" stackable={true}>
               <FeedbackForm />
               <ChartCard />
             </Card.Group>

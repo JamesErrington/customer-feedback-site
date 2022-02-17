@@ -28,7 +28,7 @@ const formState = proxy(initialFormState);
 
 export function useFormState() {
   return {
-    snapshot: useSnapshot(formState),
+    snapshot: useSnapshot(formState, { sync: true }),
     state: formState,
   };
 }
@@ -45,7 +45,8 @@ export function validateFormState(state: FormState) {
 
 export async function submitForm(id: number) {
   formState.status = FORM_STATUS.SUBMITTING;
-
+  // Using the unused variable to extract the right shape of object
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { status, ...body } = formState;
   try {
     const response = await fetch("api/comment", {
@@ -70,7 +71,7 @@ export async function submitForm(id: number) {
 function resetForm() {
   formState.name = "";
   formState.email = "";
-  formState.rating = 0;
+  formState.rating = 1;
   formState.comment = "";
   formState.status = FORM_STATUS.NORMAL;
 }

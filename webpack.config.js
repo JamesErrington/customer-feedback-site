@@ -9,7 +9,18 @@ module.exports = {
   entry: path.resolve(__dirname, "client/src/index.tsx"),
   output: {
     path: path.resolve(__dirname, "build/client"),
-    filename: "bundle.js",
+    filename: "[name].js",
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          chunks: "initial",
+          test: /node_modules/,
+          name: "vendor",
+        },
+      },
+    },
   },
   module: {
     rules: [

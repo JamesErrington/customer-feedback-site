@@ -29,7 +29,8 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": ["warn", { varsIgnorePattern: "_" }],
     "@typescript-eslint/no-inferrable-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "react/prop-types": [true, { ignore: ["children"] }],
+    "@typescript-eslint/ban-ts-comment": "off",
+    "react/prop-types": [1, { ignore: ["children"] }],
   },
   ignorePatterns: "**/build/",
   settings: {

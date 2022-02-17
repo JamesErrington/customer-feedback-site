@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import type { FunctionComponent } from "react";
 import { useRouteMatch } from "react-router-dom";
-import { Card, Form, Rating, Header } from "semantic-ui-react";
+import { Card, Form, Rating, Header, Message } from "semantic-ui-react";
 
 import { useFormState, validateFormState, submitForm, FORM_STATUS } from "../state/form";
 
@@ -22,6 +22,10 @@ export const FeedbackForm: FunctionComponent = () => {
         <Header as="h3" className="form-header">
           Leave a review
         </Header>
+        <Message error={true} className="form-error-message">
+          <Message.Header>Error</Message.Header>
+          <Message.Content>An error occured whilst submitting your review - please try again.</Message.Content>
+        </Message>
         <Form.Input
           label="Name"
           type="text"
@@ -59,7 +63,7 @@ export const FeedbackForm: FunctionComponent = () => {
           value={snapshot.comment}
           onChange={event => (state.comment = event.target.value)}
         />
-        <Form.Button primary={true} disabled={!isFormValid} className="form-submit" onClick={submit}>
+        <Form.Button id="submit-button" primary={true} disabled={!isFormValid} className="form-submit" onClick={submit}>
           Submit
         </Form.Button>
       </Form>

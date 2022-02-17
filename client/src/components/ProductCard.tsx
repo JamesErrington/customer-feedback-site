@@ -3,7 +3,6 @@ import type { FunctionComponent } from "react";
 import { Card, Item, Rating, Statistic, Placeholder } from "semantic-ui-react";
 
 import { ErrorBoundary } from "./ErrorBoundary";
-
 import { useRootState } from "../state/root";
 
 export const ProductCard: FunctionComponent = () => {

@@ -1,12 +1,9 @@
 import type { FunctionComponent } from "react";
 import { Comment, Icon } from "semantic-ui-react";
-import dayjs from "dayjs";
-import relativeTime from "dayjs/plugin/relativeTime";
 
-dayjs.extend(relativeTime);
+import { formatTimestamp } from "../utils";
 
 interface FeedbackItemProps {
-  id: number;
   name: string;
   timestamp: string;
   rating: number;
@@ -21,12 +18,12 @@ export const FeedbackItem: FunctionComponent<FeedbackItemProps> = ({ name, times
       <Comment.Content>
         <Comment.Author as="span">{name}</Comment.Author>
         <Comment.Metadata>
-          <div>{formatTimestamp(timestamp)}</div>
-          <div>
+          <div id="comment-time">{formatTimestamp(timestamp)}</div>
+          <div id="comment-star-rating">
             <Icon name="star" />
             {rating} stars
           </div>
-          <div>
+          <div id="comment-helpful-count">
             <Icon name="thumbs up" />
             {helpful} found this helpful
           </div>
@@ -39,7 +36,3 @@ export const FeedbackItem: FunctionComponent<FeedbackItemProps> = ({ name, times
     </Comment>
   );
 };
-
-function formatTimestamp(timestamp: string) {
-  return dayjs(timestamp).fromNow();
-}

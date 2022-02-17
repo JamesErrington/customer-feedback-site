@@ -5,7 +5,7 @@ export const Header: FunctionComponent = () => {
   return (
     <Menu as="header" size="large">
       <Menu.Item className="header-title">
-        <SUIHeader as="h2">Feedback</SUIHeader>
+        <SUIHeader as="h2">Customer Feedback Page</SUIHeader>
       </Menu.Item>
     </Menu>
   );

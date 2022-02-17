@@ -1,6 +1,6 @@
 {
-  "short_name": "Gift Cards",
-  "name": "Gift Cards Dashboard",
+  "short_name": "Feedback",
+  "name": "Customer Feedback Page",
   "icons": [],
   "start_url": ".",
   "display": "standalone",
